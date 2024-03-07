@@ -6,7 +6,6 @@ public class DemoPizza {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt user for toppings
         System.out.println("Enter pizza toppings. Enter 'QUIT' to finish or after 10 toppings.");
         String[] toppings = new String[10];
         int numToppings = 0;
@@ -22,7 +21,6 @@ public class DemoPizza {
             toppings[numToppings++] = topping;
         }
 
-        // Check if the pizza is to be delivered
         System.out.print("Do you want the pizza to be delivered? (yes/no): ");
         String deliveryChoice = scanner.nextLine();
 
@@ -33,7 +31,6 @@ public class DemoPizza {
             DeliveryPizza deliveryPizza = new DeliveryPizza(toppings, deliveryAddress, numToppings);
             displayPizzaInfo(deliveryPizza);
         } else {
-            // If not delivered, create Pizza object
             Pizza pizza = new Pizza(toppings, numToppings);
             displayPizzaInfo(pizza);
         }
