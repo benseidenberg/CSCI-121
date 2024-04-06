@@ -84,20 +84,19 @@ public class LinkedListAssign {
         list.append(2);
         list.append(4);
 
-        System.out.println("Original list:");
+        System.out.println("First list:");
         list.display();
         list.removeAfter(list.head.next);
-        System.out.println("List after removing node after 1:");
+        System.out.println("Removed node 2:");
         list.display();
 
         LinkedList newList = list.copy();
         System.out.println("Copied list:");
         newList.display();
         list.removeDuplicate("2");
-        System.out.println("List after removing duplicate of 2:");
+        System.out.println("Removed duplicate '2':");
         list.display();
 
-        // Testing max method
-        System.out.println("Maximum item in the list: " + list.max());
+        System.out.println("Max: " + list.max());
     }
 }
